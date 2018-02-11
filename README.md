@@ -177,6 +177,10 @@ Misc
 -----
 
 - The servo is controlled by a pulse-width-modulated (PWM) signal -- a periodic train of pulses. The width of the pulses encodes the desired angle of the servo arm. 
+        - `pwmc` is for "clock" and `pwmr` is for "range": [This Adafruit tutorial](https://learn.adafruit.com/adafruits-raspberry-pi-lesson-8-using-a-servo-motor/software) explains that the PWM freq is `19.2 MHz / pwmc / pwmr`; so setting pwmc to 192 and pwmr to 2000 yields a 50 kHz PWM signal, good for servos. 
+        - `gpio -g pwm 18 100` sets the PWM pulse to 1 ms, which sets the servo arm all the way in one direction (retract stabber).
+        - `gpio -g pwm 18 150` sets the PWM pulse to 1.5ms, puts the servo arm in the middle
+        - `gpio -g pwm 18 200` sets the PWM pulse to 2 ms, DON'T DO THIS, it'll smash the servo arm into the bottom of the cup and tear the servo off the cup.
 - We use small water balloons from K-Mart: bigger than an egg, smaller than an apple.
 - Google Cloud Quota
     - 40 requests: no change in the $300 credit. So, seems pretty cheap to run this thing.

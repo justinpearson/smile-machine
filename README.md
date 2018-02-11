@@ -1,7 +1,7 @@
 The Smile Machine
 ------------------
 
-The Smile Machine is a pair of helmets for playing a verion of the childhood game of "[stare-down](https://en.wikipedia.org/wiki/Staring#Staring_contests)". 
+The Smile Machine is a pair of helmets for playing a version of the childhood game of "[stare-down](https://en.wikipedia.org/wiki/Staring#Staring_contests)". 
 
 Each player wears a helmet. Each helmet has a camera that watches the wearer's face. When the wearer smiles, the helmet pops a water balloon over the wearer. 
 

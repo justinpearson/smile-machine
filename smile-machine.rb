@@ -47,9 +47,9 @@ def store_request(request)
 end
 
 def joy_likelihood
-  apikey = File.read('~/google-api-key.txt').strip
+  apikey = File.read('/home/pi/google-api-key.txt').strip
   result = `curl -s -H "Content-Type: application/json" --data-binary @request.json "https://vision.googleapis.com/v1/images:annotate?key=#{apikey}"`
-
+  File.write 'response.json', result
   responses = JSON.parse(result)["responses"]
   response = responses.first if responses
   annotations = response["faceAnnotations"] if response
@@ -82,11 +82,11 @@ def stab_balloon_repeatedly
 end
 
 def activate_stab
-  `gpio -g pwm 18 100`
+  `gpio -g pwm 18 150`
 end
 
 def deactivate_stab
-  `gpio -g pwm 18 150`
+  `gpio -g pwm 18 100`
 end
 
 
@@ -107,3 +107,4 @@ while true
     stab_balloon_repeatedly
   end
 end
+

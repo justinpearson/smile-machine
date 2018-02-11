@@ -20,7 +20,7 @@ Table of Contents
 
 - [How it works](#how-it-works)
 - [Setup guide](#setup-guide)
-- [Troubleshooting / Testing](#troubleshooting--Testing)
+- [Troubleshooting / Testing](#troubleshooting--testing)
 - [Misc](#misc)
 
 

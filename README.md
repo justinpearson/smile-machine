@@ -9,10 +9,10 @@ Each player wears a helmet. Each helmet has a camera that watches the wearer's f
 
 Figure 1: Smile Machines in action.
 
-The Smile Machine was created for Appfolio Hack Day on July 27, 2017 ([blog post](https://www.appfolio.com/blog/2017/08/hack-day-2017-engineering-odyssey/)).
+The Smile Machine was created for Appfolio Hack Day on July 27, 2017 ([blog post](https://www.appfolio.com/blog/2017/08/hack-day-2017-engineering-odyssey/)):
 
+![](Images/justin-john-hack-day.jpg)
 
-**Warning:** currently the Raspberry Pis don't communicate, so if one RPi pops its balloon, the other RPi is still running, and could still soak the "winner" if he or she smiles, even after the contest is over. So as soon as one RPi pops a balloon, the moderator should Ctrl-C both RPis!
 
 
 Table of Contents
@@ -61,7 +61,7 @@ Setup guide
 
 ![](Images/smile-machine.001.jpg)
 
-1. **Important:** You need to know the IP addresses of the Raspberry Pis in order to start the `smile-machine.rb` program. Upon bootup, the Raspberry Pis attempt to join the network and request an IP address over DHCP. If the wireless network password has changed or you don't know the RPis' IP addresses, you should plug in a monitor and keyboard before powering the Pis so you can give them the wireless network password and figure out which IP address they've been given. Over HDMI, the Pi presents a console at boot; use `startx` to get a graphical environment, then click the network icon in the upper-right. 
+1. **Important:** You need to `ssh` into the Raspberry Pis in order to start the `smile-machine.rb` program, so you need to know their IP addresses (they will attempt to use hostnames `smilemachinered` and `smilemachineblue` but `ping smilemachinered` didn't work for me). Upon bootup, the Raspberry Pis attempt to join the network and request an IP address over DHCP. If the wireless network password has changed or you don't know the RPis' IP addresses, you should plug in a monitor and keyboard before powering the Pis so you can give them the wireless network password and figure out which IP address they've been given. Over HDMI, the Pi presents a console at boot; use `startx` to get a graphical environment, then click the network icon in the upper-right. 
 
 2. Plug in the micro-USB cable to the power port of the RPi.
 
@@ -84,13 +84,17 @@ Setup guide
 
         $ ruby smile-machine.rb
 
-on both RPis at the same time.    
+on both RPis at the same time. Use Ctrl-C to stop the programs as soon as one of the balloons pops.
 
 **Important: when you run `smile-machine.rb`, the program will begin consuming Google Cloud credits. Do not leave it running for long!!**
+
+**Warning:** currently the Raspberry Pis don't communicate, so if one RPi pops its balloon, the other RPi is still running, and could still soak the "winner" if he or she smiles, even after the contest is over. So as soon as one RPi pops a balloon, the moderator should Ctrl-C both RPis!
 
 
 Troubleshooting / Testing
 ---------------------------
+
+See the shell scripts in the `Tests` directory.
 
 ### Test: Camera takes pictures
 

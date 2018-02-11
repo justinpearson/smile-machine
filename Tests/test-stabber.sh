@@ -2,6 +2,13 @@
 
 read -p "This test exercises the stabber arm by sending 
 the 'stab' and 'retract' commands to the PWM GPIO module. 
+If the servo buzzes after the test completes, do this:
+$ gpio -g pwm 18 101
+$ gpio -g pwm 18 102
+$ gpio -g pwm 18 103
+... until it finds a servo position where the buzzing stops.
+NOTE: Keep the PWM numbers between 100 and 150. Going above 150 may 
+cause the arm to impact the cup and rip off the servo!
 Press enter to continue."
 
 echo "Initializing PWM..."

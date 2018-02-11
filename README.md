@@ -18,10 +18,10 @@ The Smile Machine was created for Appfolio Hack Day on July 27, 2017 ([blog post
 Table of Contents
 ------------------
 
-[How it works](#how-it-works)
-[Setup guide](#setup-guide)
-[Troubleshooting / Testing](#troubleshooting-testing)
-[Misc](#misc)
+- [How it works](#how-it-works)
+- [Setup guide](#setup-guide)
+- [Troubleshooting / Testing](#troubleshooting-testing)
+- [Misc](#misc)
 
 
 How it works
@@ -73,8 +73,8 @@ Setup guide
 
 6. Log in to the RPi (user: `pi`, password: written on the back of the helmet)
 
-    $ ssh pi@<ip addr>
-    $ cd smile-machine
+        $ ssh pi@<ip addr>
+        $ cd smile-machine
 
 7. Fill a water balloon to the size of a small orange, unclip bungee cord that's holding the cup down, tilt battery cup back, insert balloon in the silver wire balloon chamber, tilt battery cup forward, re-clip bungee cord.
 
@@ -82,7 +82,7 @@ Setup guide
 
 9. **When ready,** start the contest by executing 
 
-    $ ruby smile-machine.rb
+        $ ruby smile-machine.rb
 
 on both RPis at the same time.    
 

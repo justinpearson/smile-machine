@@ -14,9 +14,11 @@ EOF
 
 echo "Sending base64-encoded image to Google Vision API..."
 
-curl -s -H "Content-Type: application/json" --data-binary @request.json "https://vision.googleapis.com/v1/images:annotate?key=$(cat /home/pi/google-api-key.txt)"
+rm -f response.json
 
-echo "There should be a line like 
+curl -s -H "Content-Type: application/json" -o response.json --data-binary @request.json "https://vision.googleapis.com/v1/images:annotate?key=$(cat /home/pi/google-api-key.txt)"
+
+echo "Now check out response.json. There should be a line like 
     \"joyLikelihood\": \"VERY_LIKELY\"
 somewhere in this response.    
 "

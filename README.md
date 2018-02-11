@@ -29,7 +29,7 @@ How it works
 
 The Raspberry Pi runs `smile-machine.rb`, in which a `while` loop executes the following logic:
 
-1. Use `raspi-still` to take a 320-by-240 picture from the camera:
+1. Use `raspistill` to take a 320-by-240 picture from the camera:
 
 ![](Images/from-raspi-cam.JPG)
 

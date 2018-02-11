@@ -20,7 +20,7 @@ Table of Contents
 
 - [How it works](#how-it-works)
 - [Setup guide](#setup-guide)
-- [Troubleshooting / Testing](#troubleshooting-testing)
+- [Troubleshooting / Testing](#troubleshooting--Testing)
 - [Misc](#misc)
 
 
@@ -121,7 +121,7 @@ Test multiple stabs:
 
 
 
-### Test: Google Vision API returns 
+### Test: Google Vision API returns a valid response
 
 Take a pic and make it into a request for the Google Vision API:
 

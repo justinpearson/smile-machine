@@ -61,7 +61,13 @@ Setup guide
 
 ![](Images/smile-machine.001.jpg)
 
-1. **Important:** You need to `ssh` into the Raspberry Pis in order to start the `smile-machine.rb` program, so you need to know their IP addresses (they will attempt to use hostnames `smilemachinered` and `smilemachineblue` but `ping smilemachinered` didn't work for me). Upon bootup, the Raspberry Pis attempt to join the network and request an IP address over DHCP. If the wireless network password has changed or you don't know the RPis' IP addresses, you should plug in a monitor and keyboard before powering the Pis so you can give them the wireless network password and figure out which IP address they've been given. Over HDMI, the Pi presents a console at boot; use `startx` to get a graphical environment, then click the network icon in the upper-right. 
+1. **Important:** You need to `ssh` into the Raspberry Pis in order to start the `smile-machine.rb` program, so you need to know their IP addresses (they will attempt to use hostnames `smilemachinered` and `smilemachineblue` but `ping smilemachinered` didn't work for me). Upon bootup, the Raspberry Pis attempt to join **the "@Guest" wireless network** and request an IP address over DHCP. If the **@Guest** wireless network password has changed or you don't know the RPis' IP addresses, you should plug in a monitor and keyboard before powering the Pis so you can give them the wireless network password and figure out which IP address they've been given. Over HDMI, the Pi presents a console at boot; use `startx` to get a graphical environment, then click the network icon in the upper-right. 
+
+    - **Warning**: The plastic case prevents the mini-HDMI connector from going all the way in. So, unfortunately, if you need to plug in mini-HDMI, you must (carefully) open the case and pry out the Raspberry Pi. Be very careful not to strain the camera's ribbon cable. 
+
+    - Also, there is only 1 micro-USB port that can be used for data (the other micro-USB port is for power). So it is hard to plug in both a keyboard and a mouse. One solution is to use one of those Apple keyboards that you can plug a mouse into.
+
+    - Because the Raspberry Pis join the @Guest network, the laptop that you are ssh'ing from also needs to be on the @Guest network!
 
 2. Plug in the micro-USB cable to the power port of the RPi.
 
